@@ -66,6 +66,12 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="/measure/radar">
+                        <span class="icon"><span class="mif-equalizer2"></span></span>
+                        <span class="caption">Maturité</span>
+                    </a>
+                </li>
 
                 <li>
                     <a href="/controls">

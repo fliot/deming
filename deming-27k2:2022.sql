@@ -13,6 +13,15 @@ INSERT INTO `domains` VALUES
 
 DELETE FROM measures;
 INSERT INTO `measures` (domain_id, clause, name, ref, tags1, tags2, tags3, tags4, tags5) VALUES
+(0,'4.x','Compréhension de l\'organisation et de son contexte','','','','','',''),
+(0,'5.x','Leadership','','','','','',''),
+(0,'6.x','Planification','','','','','',''),
+(0,'7.x','Support','','','','','',''),
+(0,'8.x','Fonctionnement','','','','','',''),
+(0,'9.2','Audit Interne','','','','','',''),
+(0,'9.3','Revue de Direction','','','','','',''),
+(0,'10.1','Non-conformité et actions correctives','','','','','','');
+
 (5,"5.01","Politiques de sécurité de l'information","05.1.1, 05.1.2","#Preventive","#Confidentiality #Integrity #Availability","#Identify","#Governance","#Governance_and_Ecosystem #Resilience"),
 (5,"5.02","Fonctions et responsabilités liées à la sécurité de l'information","06.1.1","#Preventive","#Confidentiality #Integrity #Availability","#Identify","#Governance","#Governance_and_Ecosystem #Protection #Resilience"),
 (5,"5.03","Séparation des tâches","06.1.2","#Preventive","#Confidentiality #Integrity #Availability","#Protect","#Governance #Identity_and_access_management","#Governance_and_Ecosystem"),

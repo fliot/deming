@@ -30,6 +30,7 @@ Route::get('/profile/avatar/{id}', 'ProfileController@avatar');
 Route::get('/measure/activate', 'MeasureController@activate');
 Route::get('/measure/disable', 'MeasureController@disable');
 Route::get('/measure/maturity', 'MeasureController@maturity');
+Route::get('/measure/radar', 'MeasureController@radar');
 
 /* Controls */
 Route::get('/control/show/{id}', 'ControlController@show');

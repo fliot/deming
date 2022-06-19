@@ -315,6 +315,22 @@ Log::info("activate done.");
         return null;
     }
 
+    /**
+     * Display maturity Radar
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function radar(Request $request)
+    {
+        $domains = Domain::All();        
+        $measures = Measure::All();
+
+        // return
+        return view("measures/maturity")
+            ->with("measures", $measures)
+            ->with("domains", $domains);
+    }
+
     public function export() 
     {
         return Excel::download(new MeasuresExport, 'measures.xlsx');
