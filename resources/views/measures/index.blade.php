@@ -51,7 +51,8 @@
 				    <tr>
 						<th class="sortable-column sort-asc" width="10%">Domaine</th>
 						<th class="sortable-column sort-asc" width="10%">Clause</th>
-						<th class="sortable-column sort-asc" width="70%">Nom</th>
+						<th class="sortable-column sort-asc" width="60%">Nom</th>
+						<th class="sortable-column sort-asc" width="10%">Maturité</th>
 						<th width="10%">Actif</th>
 				    </tr>
 			    </thead>
@@ -73,11 +74,21 @@
 					</td>
 					<td>{{ $measure->name }}</td>
 					<td>
+						<select name="maturity" id="maturity" onchange="setMaturity({{ $measure->id }}, this.value);">
+							<option value="0" {{ $measure->maturity==0 ? "selected" : "" }}></option>
+							<option value="1" {{ $measure->maturity==1 ? "selected" : "" }}>Initial</option>
+							<option value="2" {{ $measure->maturity==2 ? "selected" : "" }}>Reproductible</option>
+							<option value="3" {{ $measure->maturity==3 ? "selected" : "" }}>Défini</option>
+							<option value="4" {{ $measure->maturity==4 ? "selected" : "" }}>Maitrisé</option>
+							<option value="5" {{ $measure->maturity==5 ? "selected" : "" }}>Optimisé</option>
+						</select>
+					</td>
+					<td>
 						<input type="checkbox" data-role="switch" data-material="true"
 							@if ($measure->isActive($measure->id))
 								checked 
 							@endif
-							onclick="handleClick(this,{{ $measure->id }});">
+							onclick="activateControl(this,{{ $measure->id }});">
 					</td>
 				</tr>
 			@endforeach
@@ -88,7 +99,21 @@
 </div>
 
 <script type="text/javascript">
-function handleClick(cb, id) {
+function setMaturity(id, value) {
+  console.log(id + " change, new value = " + value);
+  $.ajax({
+    type: 'GET',
+    url: '{{ url( "/measure/maturity" ) }}'+"?id="+id+"&value="+value,
+    success: function (data){
+        console.log("Maturity set to "+value+" for measure "+id);
+    },
+    error: function(e) {
+        console.log("Error measure "+id+" not set to maturity value "+value);
+        console.log(e);
+    }});
+}
+
+function activateControl(cb, id) {
   console.log(id + " clicked, new value = " + cb.checked);
   if (cb.checked)
 	  $.ajax({

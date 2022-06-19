@@ -208,7 +208,13 @@ class MeasureController extends Controller
      */
     public function activate(Request $request)
     {
-        // dd($request);
+Log::info("activate start");
+        $this->validate(
+            $request, [
+                "id" => "required|integer"
+            ]
+        );
+
         $measure = Measure::find($request->id);
 
     	// Check control is disabled
@@ -239,7 +245,9 @@ class MeasureController extends Controller
             // Update link
             $prev_control = Control::where("measure_id","=",$measure->id)
                 ->where('next_id',null)
+                ->where('id',"<>",$control->id)
                 ->first();
+
             if ($prev_control!=null) {
                 $prev_control->next_id=$control->id;
                 $prev_control->update();
@@ -247,7 +255,8 @@ class MeasureController extends Controller
         }
 
         // return to the list of measures
-        return redirect("/measures");
+Log::info("activate done.");
+        return null;
     }
 
 
@@ -259,6 +268,12 @@ class MeasureController extends Controller
      */
     public function disable(Request $request)
     {
+        $this->validate(
+            $request, [
+                "id" => "required|integer"
+            ]
+        );
+
         $control_id = DB::table('controls')
             ->select('id')
             ->where('measure_id', '=', $request->id)
@@ -273,7 +288,31 @@ class MeasureController extends Controller
            }
 
         // return to the list of measures
-        return redirect("/measures");
+        return null;
+    }
+
+    /**
+     * set Maturity of a control
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function maturity(Request $request)
+    {
+        $this->validate(
+            $request, [
+                "id" => "required|integer",
+                "value" => "required|integer|min:0|max:5",
+            ]
+        );
+
+         DB::table('measures')
+              ->where('id', $request->id)
+              ->update(['maturity' => $request->value]);
+
+        // DB::update("UPDATE  SET maturity = "& $request->value &" WHERE id =" . $request->id);
+
+        return null;
     }
 
     public function export() 

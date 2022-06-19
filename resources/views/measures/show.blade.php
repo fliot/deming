@@ -38,6 +38,60 @@
 
     	<div class="row">
 			<div class="cell-1">
+	    		<strong>Maturité</strong>
+	    	</div>
+			<div class="cell">
+				{{ $measure->maturity }}
+			</div>
+	    </div>
+
+    	<div class="row">
+			<div class="cell-1">
+	    		<strong>Type de contrôle</strong>
+	    	</div>
+			<div class="cell">
+				{{ $measure->tags1 }}
+			</div>
+	    </div>
+
+    	<div class="row">
+			<div class="cell-1">
+	    		<strong>Sécurité de l'information</strong>
+	    	</div>
+			<div class="cell">
+				{{ $measure->tags2 }}
+			</div>
+	    </div>
+
+    	<div class="row">
+			<div class="cell-1">
+	    		<strong>Conceptes de cybersécurité</strong>
+	    	</div>
+			<div class="cell">
+				{{ $measure->tags3 }}
+			</div>
+	    </div>
+
+    	<div class="row">
+			<div class="cell-1">
+	    		<strong>Capacités opérationnelles</strong>
+	    	</div>
+			<div class="cell">
+				{{ $measure->tags4 }}
+			</div>
+	    </div>
+
+    	<div class="row">
+			<div class="cell-1">
+	    		<strong>Domaines de sécurité</strong>
+	    	</div>
+			<div class="cell">
+				{{ $measure->tags5 }}
+			</div>
+	    </div>
+
+    	<div class="row">
+			<div class="cell-1">
 	    		<strong>Attributs</strong>
 	    	</div>
 			<div class="cell">

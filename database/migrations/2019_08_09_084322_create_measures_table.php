@@ -23,7 +23,7 @@ class CreateMeasuresTable extends Migration
             $table->text('attributes')->nullable();
             $table->text('model')->nullable();
             $table->text('indicator')->nullable();
-            $table->text('action_plan')->nullable();
+            $table->text('action_plan')->nullable(); 
             $table->string('owner')->nullable();
             $table->integer('periodicity')->nullable();
             $table->integer('retention')->nullable();
