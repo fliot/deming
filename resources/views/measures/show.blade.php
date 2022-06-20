@@ -45,50 +45,41 @@
 			</div>
 	    </div>
 
-    	<div class="row">
-			<div class="cell-1">
-	    		<strong>Type de contrôle</strong>
+			<div class="row">
+	    		<div class="cell-1">
+		    		<strong>Type de contrôle</strong>
+		    	</div>
+	    		<div class="cell-2">
+	    			{{ $measure->tags1 }}
+	    		</div>
+	    		<div class="cell-1">
+		    		<strong>Sécurité de l'information</strong>
+		    	</div>
+	    		<div class="cell-2">
+	    			{{ $measure->tags2 }}
+	    		</div>
+	    		<div class="cell-1">
+		    		<strong>Conceptes de cybersécurité</strong>
+		    	</div>
+	    		<div class="cell-2">
+	    			{{ $measure->tags3 }}
+	    		</div>
 	    	</div>
-			<div class="cell">
-				{{ $measure->tags1 }}
+			<div class="row">
+	    		<div class="cell-1">
+		    		<strong>Capacités opérationnelles</strong>
+		    	</div>
+	    		<div class="cell-2">
+	    			{{ $measure->tags4 }}
+	    		</div>
+	    		<div class="cell-1">
+		    		<strong>Domaines de sécurité</strong>
+		    	</div>
+	    		<div class="cell-2">
+	    			{{ $measure->tags5 }}
+	    		</div>
 			</div>
-	    </div>
 
-    	<div class="row">
-			<div class="cell-1">
-	    		<strong>Sécurité de l'information</strong>
-	    	</div>
-			<div class="cell">
-				{{ $measure->tags2 }}
-			</div>
-	    </div>
-
-    	<div class="row">
-			<div class="cell-1">
-	    		<strong>Conceptes de cybersécurité</strong>
-	    	</div>
-			<div class="cell">
-				{{ $measure->tags3 }}
-			</div>
-	    </div>
-
-    	<div class="row">
-			<div class="cell-1">
-	    		<strong>Capacités opérationnelles</strong>
-	    	</div>
-			<div class="cell">
-				{{ $measure->tags4 }}
-			</div>
-	    </div>
-
-    	<div class="row">
-			<div class="cell-1">
-	    		<strong>Domaines de sécurité</strong>
-	    	</div>
-			<div class="cell">
-				{{ $measure->tags5 }}
-			</div>
-	    </div>
 
     	<div class="row">
 			<div class="cell-1">
