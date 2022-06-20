@@ -316,19 +316,33 @@ Log::info("activate done.");
     }
 
     /**
-     * Display maturity Radar
+     * Display maturity by domains
      *
      * @return \Illuminate\Http\Response
      */
-    public function radar(Request $request)
+    public function maturityTopics(Request $request)
     {
         $domains = Domain::All();        
         $measures = Measure::All();
 
         // return
-        return view("measures/maturity")
+        return view("maturity/topics")
             ->with("measures", $measures)
             ->with("domains", $domains);
+    }
+
+    /**
+     * Display maturity by tags
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function maturityTypes(Request $request)
+    {
+        $measures = Measure::All();
+
+        // return
+        return view("maturity/types")
+            ->with("measures", $measures);
     }
 
     public function export() 

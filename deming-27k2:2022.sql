@@ -1,7 +1,17 @@
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 DELETE FROM domains;
 INSERT INTO `domains` VALUES 
-(0,'27k1','ISO 27001', CURRENT_TIMESTAMP(), NULL),
+(1,'27k1','ISO 27001', CURRENT_TIMESTAMP(), NULL),
 (5,'A5',' Mesures organisationnelles',CURRENT_TIMESTAMP(), NULL),
 (6,'A6','Mesures liées aux personnes',CURRENT_TIMESTAMP(), NULL),
 (7,'A7','Contrôles physiques',CURRENT_TIMESTAMP(), NULL),
@@ -13,14 +23,14 @@ INSERT INTO `domains` VALUES
 
 DELETE FROM measures;
 INSERT INTO `measures` (domain_id, clause, name, ref, tags1, tags2, tags3, tags4, tags5) VALUES
-(0,'4.x','Compréhension de l\'organisation et de son contexte','','','','','',''),
-(0,'5.x','Leadership','','','','','',''),
-(0,'6.x','Planification','','','','','',''),
-(0,'7.x','Support','','','','','',''),
-(0,'8.x','Fonctionnement','','','','','',''),
-(0,'9.2','Audit Interne','','','','','',''),
-(0,'9.3','Revue de Direction','','','','','',''),
-(0,'10.1','Non-conformité et actions correctives','','','','','','');
+(1,'4.x','Compréhension de l\'organisation et de son contexte','','','','','',''),
+(1,'5.x','Leadership','','','','','',''),
+(1,'6.x','Planification','','','','','',''),
+(1,'7.x','Support','','','','','',''),
+(1,'8.x','Fonctionnement','','','','','',''),
+(1,'9.2','Audit Interne','','','','','',''),
+(1,'9.3','Revue de Direction','','','','','',''),
+(1,'10.1','Non-conformité et actions correctives','','','','','',''),
 
 (5,"5.01","Politiques de sécurité de l'information","05.1.1, 05.1.2","#Preventive","#Confidentiality #Integrity #Availability","#Identify","#Governance","#Governance_and_Ecosystem #Resilience"),
 (5,"5.02","Fonctions et responsabilités liées à la sécurité de l'information","06.1.1","#Preventive","#Confidentiality #Integrity #Availability","#Identify","#Governance","#Governance_and_Ecosystem #Protection #Resilience"),
@@ -118,6 +128,13 @@ INSERT INTO `measures` (domain_id, clause, name, ref, tags1, tags2, tags3, tags4
 
 
 
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 
 

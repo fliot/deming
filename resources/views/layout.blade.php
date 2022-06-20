@@ -67,10 +67,30 @@
                 </li>
 
                 <li>
-                    <a href="/measure/radar">
+                    <a href="#" class="dropdown-toggle">
                         <span class="icon"><span class="mif-equalizer2"></span></span>
                         <span class="caption">Maturité</span>
                     </a>
+                    <ul class="navview-menu stay-open" data-role="dropdown" >
+                        <li><a href="/maturity/topics">
+                            <span class="caption">Sujet</span>
+                        </a></li>
+                        <li><a href="/maturity/types">
+                            <span class="caption">Types de controles</span>
+                        </a></li>
+                        <li><a href="/maturity/informationsecurity">
+                            <span class="caption">Sécurité de l'information</span>
+                        </a></li>
+                        <li><a href="/maturity/cybersecurity">
+                            <span class="caption">Conceptes de cybersécurité</span>
+                        </a></li>
+                        <li><a href="/maturity/operational">
+                            <span class="caption">Capacités opérationnelles</span>
+                        </a></li>
+                        <li><a href="/maturity/domains">
+                            <span class="caption">Domaines de sécurité</span>
+                        </a></li>
+                    </ul>
                 </li>
 
                 <li>
